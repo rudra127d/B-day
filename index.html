@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎉 जन्मदिन की शुभकामनाएँ</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('background1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: golden;
+      overflow: hidden;
+    }.content {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  font-size: 1.2em;
+  line-height: 1.6;
+  background: rgba(0,0,0,0.5);
+  border-radius: 20px;
+  animation: fadeIn 2s ease-in-out;
+  margin-top: 40px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.typing {
+  display: inline-block;
+  white-space: nowrap;
+  border-right: 2px solid rgba(255,255,255,0.75);
+  overflow: hidden;
+  animation: typing 6s steps(60, end), blink 0.8s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.heart {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  background: pink;
+  transform: rotate(45deg);
+  animation: fall 10s linear infinite;
+  opacity: 0.7;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -7.5px;
+  left: 0;
+}
+
+.heart::after {
+  left: -7.5px;
+  top: 0;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-100px) rotate(45deg); }
+  100% { transform: translateY(100vh) rotate(45deg); }
+}
+
+  </style>
+</head>
+<body>  <div class="content">
+    <h1 class="typing">🎉 जन्मदिन की शुभकामनाएँ सृष्टि जी 💖</h1>
+    <p> class="typing">आपका होना मेरे जीवन की सबसे खूबसूरत सौगातों में से एक है।</p>
+    <p> आपकी मुस्कान मेरे दिल को सुकून देती है और आपकी बातें मेरे जीवन को मायने देते  हैं।</p>
+    <p> इस खास दिन पर मैं दिल से दुआ करता हूँ कि—</p>
+    <p> ✨ आपका हर दिन नई खुशियों से भरा हो,<br>
+       🌸 हर ख्वाब पूरा हो,<br>
+       💫 हर मोड़ पर सफलता मिले,<br>
+       💕 और आपका जीवन हमेशा प्यार, सम्मान और मुस्कान से सजा रहे।</p>
+    <p>आप जैसी खुबसूरत दोस्त इस दुनिया में बहुत कम होती हैं — जिनके दिल में अपनापन हो, बातों में मिठास हो।</p>
+    <p><strong>आपका जन्मदिन मेरे लिए भी किसी त्योहार से कम नहीं है।</strong></p>
+    <p>🎂 जन्मदिन की ढेरों शुभकामनाएँ! आप हमेशा खुश रहें। 🌹</p>
+    <p>❤️ रुद्र ❤️</p>
+  </div>  <div class="content" style="margin-top: 60px; text-align: center;">
+    <button onclick="revealMessage()" style="padding: 10px 20px; font-size: 1.1em; background: #ff69b4; color: white; border: none; border-radius: 10px; cursor: pointer;">
+      💌 Tap to Reveal 💌
+    </button><div id="hiddenMessage" style="display: none; margin-top: 20px; font-size: 1.2em;">
+  <p style="animation: typing 4s steps(40, end); white-space: nowrap; overflow: hidden; border-right: 2px solid white;">
+    अगर तुम साथ हो तो हर लम्हा खास बन जाता है... 💖
+  </p>
+  <p>आप मेरी दुआओं का जवाब नहीं, मेरी दुआ ही हो। 🌹</p>
+  <p>शायद यह जिंदगी इतनी हसीन इसलिए है... क्योंकि इसमे   *आप* हो।</p>
+  <p>जब आप बातें करती हो।  मेरी परेशानीया खत्म होने लगती है।
+  <p>आप सिर्फ एक नाम नहीं, मेरी हर दुआ का असर हो।</p>
+  <p>❤️ आप "पल-पल दिल के पास तुम रहती हो..." ❤️</p>
+  <p style="font-weight: bold; color: #ffb6c1; font-size: 1.3em;">I Love You 💕</p>
+</div>
+
+  </div>  <!-- Background Music (Only on Page 2+) -->  <audio id="bg-music" autoplay loop>
+    <source src="jaan-ban-gaye.mp3" type="audio/mpeg">
+  </audio>  <script>
+    // Create heart rain animation
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = Math.random() * 3 + 7 + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 10000);
+    }
+    setInterval(createHeart, 200);
+
+    // Optional: Play music with page starting
+    const pageNumber = 1,2,3,4; // 
+    if (pageNumber < 2) {
+      document.getElementById("bg-music").remove();
+    }
+
+    // Reveal message
+    function revealMessage() {
+      document.getElementById("hiddenMessage").style.display = "block";
+    }
+  </script></body>
+</html>
